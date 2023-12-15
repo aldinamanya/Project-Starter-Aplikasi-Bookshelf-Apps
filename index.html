@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="app" class="container">
+    <h1>Bookshelf App</h1>
+    
+    <!-- Form untuk menambahkan buku -->
+    <form id="addBookForm" class="form">
+        <label for="title">Judul Buku:</label>
+        <input type="text" id="title" class="form-control" required>
+        
+        <label for="author">Penulis:</label>
+        <input type="text" id="author" class="form-control" required>
+
+        <label for="year">Tahun:</label>
+        <input type="number" id="year" class="form-control" required>
+
+        <label for="isComplete">Selesai dibaca:</label>
+        <input type="checkbox" id="isComplete" class="form-check-input">
+        
+        <button type="button" onclick="addBook()" class="btn btn-primary"><i class="fas fa-plus"></i> Tambahkan Buku</button>
+    </form>
+
+    <!-- Rak buku "Belum selesai dibaca" -->
+    <div class="bookshelf" id="unfinishedShelf">
+        <h2>Rak Belum Selesai Dibaca</h2>
+        <ul id="unfinishedList" class="book-list"></ul>
+    </div>
+
+    <!-- Rak buku "Selesai dibaca" -->
+    <div class="bookshelf" id="finishedShelf">
+        <h2>Rak Selesai Dibaca</h2>
+        <ul id="finishedList" class="book-list"></ul>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
